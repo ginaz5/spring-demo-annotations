@@ -2,7 +2,7 @@ package com.course.springdemo;
 
 import org.springframework.stereotype.Component;
 
-@Component("thatSillyCoach")
+@Component // the default bean id will be tennisCoach
 public class TennisCoach implements Coach {
 
     @Override
