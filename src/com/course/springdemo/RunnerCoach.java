@@ -9,4 +9,9 @@ public class RunnerCoach implements Coach {
     public String getDailyWorkout() {
         return "Let's do easy run today";
     }
+
+    @Override
+    public String getDailyFortune() {
+        return null;
+    }
 }
