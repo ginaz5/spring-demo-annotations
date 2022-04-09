@@ -13,6 +13,7 @@ public class AnnotationDemoApp {
         // get the bean from spring container
         Coach theCoach = context.getBean("tennisCoach", Coach.class);
         Coach Practice = context.getBean("runnerCoach", Coach.class);
+        TennisCoach tennisCoach = context.getBean("tennisCoach", TennisCoach.class);
 
         // call the method on the bean
         System.out.println(theCoach.getDailyWorkout());
@@ -20,6 +21,10 @@ public class AnnotationDemoApp {
 
         // call the method to get the daily fortune
         System.out.println(theCoach.getDailyFortune());
+
+        // call injected properties values
+        System.out.println("Team: "+ tennisCoach.getTeam());
+        System.out.println("Email: "+ tennisCoach.getEmail());
 
         // close the context
         context.close();

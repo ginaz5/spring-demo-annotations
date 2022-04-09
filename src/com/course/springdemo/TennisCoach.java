@@ -2,6 +2,7 @@ package com.course.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component // the default bean id will be tennisCoach
@@ -11,9 +12,22 @@ public class TennisCoach implements Coach {
     @Qualifier("randomFortuneService")
     private FortuneService fortuneService;
 
+    @Value("${foo.email}")
+    private String email;
+
+    @Value("${foo.team}")
+    private String team;
+
     // define a default constructor
     public TennisCoach() {
         System.out.println(">> TennisCoach: default constructor");
+    }
+
+    public String getTeam() {
+        return this.team;
+    }
+    public String getEmail() {
+        return this.email;
     }
 
     /* define a setter method
