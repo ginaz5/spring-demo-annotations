@@ -16,4 +16,8 @@
     <!-- Load the properties file: sport.properties -->
     <context:property-placeholder location="classpath:sport.properties"/>
 
+
+    <!-- Load the properties file: practiceFive.properties -->
+    <context:property-placeholder location="classpath:practiceFive.properties"/>
+
 </beans>

@@ -19,12 +19,9 @@ public class AnnotationDemoApp {
         System.out.println(theCoach.getDailyWorkout());
         System.out.println(Practice.getDailyWorkout());
 
-        // call the method to get the daily fortune
-        System.out.println(theCoach.getDailyFortune());
-
-        // call injected properties values
-        System.out.println("Team: "+ tennisCoach.getTeam());
-        System.out.println("Email: "+ tennisCoach.getEmail());
+        // practice 5
+        Coach PracticeFiveCoach = context.getBean("PracticeFiveCoach", Coach.class);
+        System.out.println(PracticeFiveCoach.getDailyFortune());
 
         // close the context
         context.close();
