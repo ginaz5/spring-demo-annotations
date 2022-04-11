@@ -16,7 +16,9 @@ public class PracticeFiveService implements FortuneService {
 
     @Value("${practice.fortunes}")
     private String[] arrWithProperties;
-    private ArrayList<String> arrWithFile;
+
+    // if you don't initialize array, you will get nullpointer exception in arrWithFile.add(s);
+    private ArrayList<String> arrWithFile = new ArrayList<>();
 
     private Random myRandom = new Random();
 
@@ -29,10 +31,10 @@ public class PracticeFiveService implements FortuneService {
             );
             String s;
             while ((s = br.readLine()) != null){
-                System.out.println("S -> "+s);
+                // System.out.println("S -> "+s);
                 arrWithFile.add(s);
             }
-            //br.close();
+            br.close();
         } catch (IOException e) {
             System.out.println("something went wrong");
             e.printStackTrace();

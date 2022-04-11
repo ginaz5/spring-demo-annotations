@@ -20,7 +20,7 @@ public class AnnotationDemoApp {
         System.out.println(Practice.getDailyWorkout());
 
         // practice 5
-        Coach PracticeFiveCoach = context.getBean("PracticeFiveCoach", Coach.class);
+        PracticeFiveCoach PracticeFiveCoach = context.getBean("practiceFiveCoach", PracticeFiveCoach.class);
         System.out.println(PracticeFiveCoach.getDailyFortune());
 
         // close the context
