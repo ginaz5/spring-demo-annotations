@@ -24,7 +24,6 @@ public class PracticeFiveService implements FortuneService {
 
     public PracticeFiveService () {
 
-
         try {
             BufferedReader br = new BufferedReader(
                     new FileReader("/Users/ginalin/Dev/IDEA/spring-demo-annotations/src/fortune.txt")
