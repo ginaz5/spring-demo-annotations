@@ -11,11 +11,17 @@ public class SwimJavaConfigDemoApp {
                 new AnnotationConfigApplicationContext(SportConfig.class);
 
         // get the bean from spring container
-        Coach theCoach = context.getBean("swimCoach", Coach.class);
+        // change type to SwimCoach to use getEmail and getTeam method that not in Coach.class
+        SwimCoach theCoach = context.getBean("swimCoach", SwimCoach.class);
 
         // call the method on the bean
         System.out.println(theCoach.getDailyWorkout());
         System.out.println(theCoach.getDailyFortune());
+
+        // call inject properties
+        System.out.println("Injected Email: " + theCoach.getEmail());
+        System.out.println("Injected Team: " + theCoach.getTeam());
+
 
         // close the context
         context.close();
