@@ -8,12 +8,12 @@ import org.springframework.context.annotation.Configuration;
 public class PracticeSevenConfig {
 
     @Bean
-    public FortuneService PracticeSevenService(){
+    public FortuneService practiceSevenService(){
         return new PracticeSevenService();
     }
 
     @Bean
-    public Coach PracticeSevenCoach() {
-        return new PracticeSevenCoach(PracticeSevenService());
+    public Coach practiceSevenCoach() {
+        return new PracticeSevenCoach(practiceSevenService());
     }
 }
